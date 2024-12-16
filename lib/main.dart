@@ -1,8 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:programacion_apps_2/src/pages/home_page.dart';
-
+import 'package:programacion_apps_2/src/pages/index_page.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const IndexPage(),
     );
   }
 }
