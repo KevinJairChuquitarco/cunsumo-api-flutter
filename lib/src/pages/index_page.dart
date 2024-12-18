@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:programacion_apps_2/src/pages/home_page.dart';
+import 'package:programacion_apps_2/src/pages/produc_page.dart';
 
 class IndexPage extends StatelessWidget {
   const IndexPage({super.key});
@@ -11,13 +12,24 @@ class IndexPage extends StatelessWidget {
         title: const Text("Página Index"),
       ),
       body: Center(
-        child: ElevatedButton(
+        child: Column(
+          children: [
+            ElevatedButton(
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const HomePage()));
             },
-            child: const Text("Ir a otra pantalla")),
+            child: const Text("Ir a otra pantalla")
+            ),
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, 
+              MaterialPageRoute(builder: (context)=> const ProductPage(nombre: "Kevin",))
+              );
+            }, child: const Text("Navegar Pasar Parámetros"))
+          ],
+        ),
       ),
+
     );
   }
 }
